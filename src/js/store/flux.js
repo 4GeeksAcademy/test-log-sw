@@ -181,7 +181,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           const response = await fetch(API_URL + "/login", {
             method: "POST",
             headers: {
-              "Content-Type": "application/json", // Utiliser le préfixe "Bearer" pour l'autorisation
+              "Content-Type": "application/json", 
             },
             body: JSON.stringify({
               email: userEmail,
@@ -190,11 +190,10 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
 
           if (response.ok) {
-            console.log(response);
             const data = await response.json();
-            console.log(data);
             localStorage.setItem("myToken", data.access_token);
             setStore({ user: data.user });
+            console.log(data);
             return data;
           } else if (response.status === 401) {
             // Gérer l'erreur de connexion non autorisée
@@ -208,7 +207,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       // Fonction d'inscription
       signup: async (userEmail, userPassword) => {
-        try { // Utiliser la clé "myToken" au lieu de "token"
+        try {
+          // Utiliser la clé "myToken" au lieu de "token"
           const response = await fetch(API_URL + "/signup", {
             method: "POST",
             headers: {
@@ -223,7 +223,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           if (response.ok) {
             console.log(response);
             console.log("Todo perfecto");
-            return response
+            return response;
           } else if (response.status === 401) {
             // Gérer l'erreur de connexion non autorisée
             return false;

@@ -16,7 +16,7 @@ export const Navbar = () => {
     let isLogged = actions.logout();
     if (isLogged) {
       localStorage.removeItem("myToken");
-      setIsLoggedIn(false)
+      setIsLoggedIn(false);
       console.log("session closed");
     }
   }
@@ -76,9 +76,12 @@ export const Navbar = () => {
             </ul>
           </div>
           {isLoggedIn ? (
-            <button className="btn btn-primary" onClick={handleLogout}>
-              Log Out
-            </button>
+            <>
+              <h3>Hi, {store.user.email}</h3>
+              <button className="btn btn-primary  " onClick={handleLogout}>
+                Log Out
+              </button>
+            </>
           ) : (
             <div>
               <Link to="/login">

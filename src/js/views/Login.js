@@ -17,7 +17,7 @@ export const Login = () => {
     console.log(isLogged);
     if (isLogged) {
       // Connexion réussie
-      navigate("/");
+      navigate("/home");
     } else {
       // Connexion échouée
       setLoginError("Email and/or password incorrect");

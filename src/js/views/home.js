@@ -8,6 +8,7 @@ import { Navbar } from "../component/navbar.js";
 export const Home = () => {
   const { store, actions } = useContext(Context);
   const [isLoading, setIsLoading] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     // Simulate loading delay
@@ -22,9 +23,11 @@ export const Home = () => {
 
     return () => clearTimeout(timer); // Nettoyer le timer si le composant est démonté avant la fin du délai
   }, []);
-  // useEffect(() => { actions.getPeople();
-  //        actions.getPlanet();
-  //        actions.getVehicle();}, [])
+
+  if (!store.user) {
+    // Si l'utilisateur n'est pas connecté, ne pas afficher le contenu de Home
+    return <h1>You need to log in</h1>;
+  }
 
   return (
     <>
@@ -40,73 +43,82 @@ export const Home = () => {
         </div>
       ) : (
         <>
-          <Navbar />
-          <div className="main-content">
-            <div>
-              <div>
-                <h2 className="heading">Characters:</h2>
-              </div>
-            </div>
-            <div>
-              <div className="d-flex cards-content">
-                <div className="d-flex ">
-                  {store.people
-                    ? store.people.map((character, index) => (
-                        <CardsPeople
-                          key={character.url}
-                          index={index}
-                          character={character}
-                        />
-                      ))
-                    : ""}
+          {isLoggedIn ? (
+            <>
+              <Navbar />
+              <div className="main-content">
+                <div>
+                  <div>
+                    <h2 className="heading">Characters:</h2>
+                  </div>
+                </div>
+                <div>
+                  <div className="d-flex cards-content">
+                    <div className="d-flex ">
+                      {store.people
+                        ? store.people.map((character, index) => (
+                            <CardsPeople
+                              key={character.url}
+                              index={index}
+                              character={character}
+                            />
+                          ))
+                        : ""}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div>
-            <div>
               <div>
-                <h2 className="heading">Planets:</h2>
-              </div>
-            </div>
-            <div>
-              <div className="d-flex cards-content">
-                <div className="d-flex ">
-                  {store.planets
-                    ? store.planets.map((planet, index) => (
-                        <CardsPlanets
-                          key={planet.url}
-                          index={index}
-                          planet={planet}
-                        />
-                      ))
-                    : ""}
+                <div>
+                  <div>
+                    <h2 className="heading">Planets:</h2>
+                  </div>
+                </div>
+                <div>
+                  <div className="d-flex cards-content">
+                    <div className="d-flex ">
+                      {store.planets
+                        ? store.planets.map((planet, index) => (
+                            <CardsPlanets
+                              key={planet.url}
+                              index={index}
+                              planet={planet}
+                            />
+                          ))
+                        : ""}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div>
-            <div>
               <div>
-                <h2 className="heading">Vehicles:</h2>
-              </div>
-            </div>
-            <div>
-              <div className="d-flex cards-content">
-                <div className="d-flex ">
-                  {store.vehicles
-                    ? store.vehicles.map((vehicle, index) => (
-                        <CardsVehicles
-                          key={vehicle.url}
-                          index={index}
-                          vehicle={vehicle}
-                        />
-                      ))
-                    : ""}
+                <div>
+                  <div>
+                    <h2 className="heading">Vehicles:</h2>
+                  </div>
+                </div>
+                <div>
+                  <div className="d-flex cards-content">
+                    <div className="d-flex ">
+                      {store.vehicles
+                        ? store.vehicles.map((vehicle, index) => (
+                            <CardsVehicles
+                              key={vehicle.url}
+                              index={index}
+                              vehicle={vehicle}
+                            />
+                          ))
+                        : ""}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </>
+          ) : (
+            <>
+              <Navbar />
+              <h1 className="title-log-home text-center">You need to log in</h1>
+            </>
+          )}
         </>
       )}
     </>

@@ -20,3 +20,24 @@ body {
   margin-bottom: 10px;
   font-size: 3.5rem;
 }
+
+.title-log-home {
+  font-size: 5rem;
+  color: #cac973;
+  animation: flash 1.2s linear infinite;
+}
+
+@keyframes flash {
+  0% {
+    color: #cac973;
+    text-shadow: 0 0 7px #ff0400;
+  }
+  90% {
+    color: #a39d7f;
+    text-shadow: none;
+  }
+  100% {
+    color: #cac973;
+    text-shadow: 0 0 7px #ff0400;
+  }
+}
