@@ -27,7 +27,7 @@ export const Login = () => {
   return (
     <>
       <Navbar />
-      <h1>Glad to see you again jedi</h1>
+      <h1 className="title-log">Glad to see you again jedi</h1>
       <div>
         <form
           className="container log-content card mx-auto bg-transparent text-center"
@@ -69,7 +69,7 @@ export const Login = () => {
           {/* Affichage du message d'erreur */}
           <Link to="/signup">
             <p className="mt-4 create-p ">
-              Don't you have an account? <span>click here</span>
+              Don't you have an account? <span className="click">click here</span>
             </p>
           </Link>
         </form>

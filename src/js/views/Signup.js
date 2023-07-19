@@ -28,7 +28,7 @@ const Signup = () => {
   return (
     <>
       <Navbar />
-      <h1>Glad to see you again jedi</h1>
+      <h1 className="title-log">Welcome young padawan</h1>
       <div>
         <form
           className="container log-content card mx-auto bg-transparent text-center"
@@ -66,11 +66,11 @@ const Signup = () => {
           <button type="submit" className="btn btn-primary btn-log btn-more">
             Create account
           </button>
-          {loginError && <p className="text-danger">{loginError}</p>}{" "}
+          {loginError && <p className="text-danger m-4">{loginError}</p>}{" "}
           {/* Affichage du message d'erreur */}
-          <Link to="/signup">
+          <Link to="/login">
             <p className="mt-4 create-p ">
-              Do you already have an account? <span>click here</span>
+              Do you already have an account? <span className="click">click here</span>
             </p>
           </Link>
         </form>

@@ -3,6 +3,13 @@
   height: 350px;
 }
 
+.title-log {
+  font-size: 3.5rem;
+  text-align: center;
+  color: #cac873;
+  text-shadow: 1px 1px 2px #cac973;
+}
+
 .form-control {
   width: 80%;
   margin-top: 15px;
@@ -32,4 +39,8 @@
 .create-p:hover {
   color: #e8e7b2;
   text-decoration: underline;
+}
+
+.click {
+  font-size: 1rem;
 }
