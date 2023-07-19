@@ -24,16 +24,16 @@ body {
 .title-log-home {
   font-size: 5rem;
   color: #cac973;
-  animation: flash 1.2s linear infinite;
+  animation: log 1.2s linear infinite;
 }
 
-@keyframes flash {
+@keyframes log {
   0% {
     color: #cac973;
     text-shadow: 0 0 7px #ff0400;
   }
   90% {
-    color: #a39d7f;
+    color: #c48937;
     text-shadow: none;
   }
   100% {
