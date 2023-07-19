@@ -1,6 +1,6 @@
 p,
 .github {
-  color: #cac873;
+  color: var(--main-color);
   font-weight: 600;
 }
 

@@ -21,7 +21,7 @@
 }
 
 li > h2 {
-  color: #cac873;
+  color: var(--main-color);
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -29,7 +29,7 @@ li > h2 {
 }
 .bx-lg {
   font-size: 1.5rem;
-  color: #cac873;
+  color: var(--main-color);
 }
 
 .logo-nav {
@@ -51,15 +51,15 @@ li > h2 {
   transition: all 0.5s ease;
   color: #000;
   font-weight: 500;
-  background-color: #cac873;
+  background-color: var(--main-color);
   text-transform: uppercase;
 }
 
 .btn-favorite:hover {
-  color: #cac873;
+  color: var(--main-color);
   background-color: transparent;
 }
 
-.btn-out{
+.btn-out {
   background: #fa0000;
 }

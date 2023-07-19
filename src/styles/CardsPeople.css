@@ -11,14 +11,14 @@
 }
 
 .card-title {
-  color: #cac873;
+  color: var(--main-color);
   text-align: left;
   text-align: center;
   font-size: 1.5rem;
 }
 
 .card-text {
-  color: #cac873;
+  color: var(--main-color);
   text-align: center;
 }
 .card:hover {
@@ -39,7 +39,7 @@
   height: 510px;
   width: 300px;
   margin: 10px;
-  border: 1px solid #cac873;
+  border: 1px solid var(--main-color);
   background: transparent;
   transition: all.6s;
 }
@@ -61,14 +61,14 @@ a {
   transition: all 0.5s ease;
   color: #000;
   font-weight: 500;
-  background-color: #cac873;
+  background-color: var(--main-color);
   text-transform: uppercase;
   transition: all 0.6s;
 }
 
 .btn-more:hover,
 .btn-fav:hover {
-  color: #cac873;
+  color: var(--main-color);
   background-color: transparent;
 }
 
@@ -93,11 +93,11 @@ a {
   height: 0px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cac873;
+  background: var(--main-color);
   border-radius: 100px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #cac873;
+  background: var(--main-color);
 }
 ::-webkit-scrollbar-thumb:active {
   background: #b1832c;
