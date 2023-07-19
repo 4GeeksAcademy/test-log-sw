@@ -1,0 +1,35 @@
+.log-content {
+  width: 50%;
+  height: 350px;
+}
+
+.form-control {
+  width: 80%;
+  margin-top: 15px;
+  margin-bottom: 0;
+  margin-inline: auto;
+}
+
+.btn-log {
+  margin-inline: auto;
+  margin-top: 20px;
+  padding: 6px 18px;
+}
+.log-label {
+  color: #cac873;
+  font-size: 1.5rem;
+}
+
+.card {
+  backdrop-filter: blur(5px);
+}
+
+.create-p {
+  font-size: 1.3rem;
+  transition: all 0.5s;
+}
+
+.create-p:hover {
+  color: #e8e7b2;
+  text-decoration: underline;
+}

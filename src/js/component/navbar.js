@@ -17,7 +17,7 @@ export const Navbar = () => {
     if (isLogged) {
       localStorage.removeItem("myToken");
       setIsLoggedIn(false)
-      console.log("cierras sesion pero no refresca");
+      console.log("session closed");
     }
   }
 
