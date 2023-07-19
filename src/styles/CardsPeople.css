@@ -40,7 +40,7 @@
   width: 300px;
   margin: 10px;
   border: 1px solid #cac873;
-  background: rgba(0, 0, 0, 0.9);
+  background: transparent;
   transition: all.6s;
 }
 
