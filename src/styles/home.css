@@ -5,12 +5,13 @@
 }
 
 body {
-  background-image: url(https://cdn.wallpapersafari.com/96/60/ZBf0Im.jpg);
+  background-image: url(https://getwallpapers.com/wallpaper/full/4/f/c/1100388-large-hd-star-wars-wallpaper-1920x1080-for-pc.jpg);
 
   background-size: cover;
   background-position: center;
   height: 100vh;
   font-family: "Josefin Sans";
+  overflow-x: hidden;
 }
 
 .heading {

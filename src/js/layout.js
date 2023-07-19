@@ -7,7 +7,6 @@ import injectContext from "./store/appContext";
 import Login from "./views/Login";
 import Signup from "./views/Signup";
 
-
 import { Footer } from "./component/footer";
 
 //create your first component
