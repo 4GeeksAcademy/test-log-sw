@@ -78,17 +78,24 @@ export const Navbar = () => {
           {isLoggedIn ? (
             <>
               <h3>Hi, {store.user.email}</h3>
-              <button className="btn btn-primary btn-out  " onClick={handleLogout}>
+              <button
+                className="btn btn-primary btn-out  "
+                onClick={handleLogout}
+              >
                 Log Out
               </button>
             </>
           ) : (
             <div className="d-flex">
               <Link to="/login">
-                <button className="btn btn-primary btn-log btn-more">Log In</button>
+                <button className="btn btn-primary btn-log btn-more me-3">
+                  Log In
+                </button>
               </Link>
               <Link to="/signup">
-                <button className="btn btn-primary btn-log btn-more">Sign Up</button>
+                <button className="btn btn-primary btn-log btn-more">
+                  Sign Up
+                </button>
               </Link>
             </div>
           )}
